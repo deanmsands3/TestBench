@@ -37,13 +37,8 @@ int main()
     for(unsigned i=0;i<pe.getSizeOfQueue();i++){
         DMS3::Event a(uniform_dist(generator),(void*)SillyMessages[i%5]);
         bool truth=pe.pushEvent(a);
-        std::cout<<"Pushed: "<<a.getId()<<" which returned: "<<truth<<std::endl;
+        //std::cout<<"Pushed: "<<a.getId()<<" which returned: "<<truth<<std::endl;
     }
-//    for(unsigned i=0;i<_size_of_queue;i++){
-//        DMS3::Event a;
-//        bool truth=_queue.pop(a);
-//        std::cout<<"Popped: "<<a.getId()<<" which returned: "<<truth<<std::endl;
-//    }
     pe.nowDone();
     pe_thread->join();
     return 0;

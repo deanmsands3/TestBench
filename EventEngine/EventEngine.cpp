@@ -25,7 +25,9 @@ EventEngine::EventEngine(const unsigned new_size_of_queue, const unsigned short 
 
 EventEngine::~EventEngine()
 {
-    //dtor
+    if(_thread==nullptr){return;}
+    if(_thread->joinable()){_thread->join();}
+    delete _thread;
 }
 
 EventEngine::EventEngine(const EventEngine& that):
@@ -35,7 +37,7 @@ EventEngine::EventEngine(const EventEngine& that):
     _thread=new std::thread(EventEngine::run, this);
 }
 bool EventEngine::pushEvent(const Event &new_event){
-        std::unique_lock<std::mutex> locker(_lockqueue);
+        //std::unique_lock<std::mutex> locker(_lockqueue);
         if(!_queue.push(new_event)){return false;}
         _queuecheck.notify_one();
         return true;
