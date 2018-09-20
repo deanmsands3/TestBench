@@ -5,7 +5,7 @@
  *      Author: dean
  */
 
-#include <RenderingEngine.h>
+#include "RenderingEngine.h"
 
 namespace DMS3 {
 

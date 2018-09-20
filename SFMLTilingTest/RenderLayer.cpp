@@ -5,15 +5,15 @@
  *      Author: dean
  */
 
-#include <RenderLayer.h>
+#include "RenderLayer.h"
 namespace DMS3 {
 
-RRenderLayer:RRenderLayer) {
+RenderLayer:RenderLayer) {
 	// TODO Auto-generated constructor stub
 
 }
 
-RRenderLayer:~RRenderLayer) {
+RenderLayer:~RenderLayer) {
 	// TODO Auto-generated destructor stub
 }
 

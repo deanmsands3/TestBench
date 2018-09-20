@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1537159123 source:/home/dean/Workspaces/TestBench/Threading/main.cpp
+	<thread>
+	<mutex>
+	<condition_variable>
+	<iostream>
+	<queue>
+	<random>
+	<array>
+	<vector>
+

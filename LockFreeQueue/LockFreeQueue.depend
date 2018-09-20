@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1537349243 source:/home/dean/Workspaces/TestBench/LockFreeQueue/Event.cpp
+	"Event.h"
+
+1537349047 /home/dean/Workspaces/TestBench/LockFreeQueue/Event.h
+	<cstdint>
+	<climits>
+
+1537347612 source:/home/dean/Workspaces/TestBench/LockFreeQueue/main.cpp
+	<boost/lockfree/queue.hpp>
+	<iostream>
+	<random>
+	"Event.h"
+	"EventEngine.h"
+
+1537348221 /home/dean/Workspaces/TestBench/LockFreeQueue/EventEngine.h
+	"Event.h"
+	<boost/lockfree/queue.hpp>
+	<thread>
+	<condition_variable>
+	<mutex>
+

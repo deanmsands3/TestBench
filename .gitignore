@@ -37,3 +37,5 @@
 /.metadata/
 .settings/
 Debug/
+build/
+*/main
