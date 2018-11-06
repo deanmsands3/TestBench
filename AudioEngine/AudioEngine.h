@@ -13,7 +13,7 @@ class AudioEngine: public EventEngine
         AudioEngine(const AudioEngine& other);
 
     protected:
-
+        virtual void process_event(Event &ev);
     private:
 };
 }
