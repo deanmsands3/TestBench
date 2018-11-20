@@ -24,12 +24,7 @@ int main()
     	soundbuffer.loadFromMemory(ba.data(),ba.length());
     	buffers.push_back(soundbuffer);
     }
-//    for(sf::SoundBuffer buffer:buffers){
-//    	sf::Sound sound;
-//    	sound.setBuffer(buffer);
-//    	sounds.push_back(sound);
-//    	sound.play();std::this_thread::sleep_for(1000ms);
-//    }
+
     for(unsigned i=0;i<ae.getSizeOfQueue();i++){
     	int j=i%bav.size();
     	void *payload=(void*)(&buffers[j]);
