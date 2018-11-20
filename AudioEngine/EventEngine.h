@@ -20,6 +20,7 @@ class EventEngine
 protected:
     virtual void process_events();
     virtual void process_event(Event &ev);
+
 public:
     EventEngine();
     EventEngine(const unsigned new_size_of_queue, const unsigned short new_engine_id);

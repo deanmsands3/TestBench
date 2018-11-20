@@ -8,6 +8,8 @@
 
 
 namespace DMS3{
+	_64bit::_64bit(std::uint64_t new_value=0){_64=new_value;}
+
     Event::Event():
         _id(0), _payload(nullptr){}
 
@@ -20,11 +22,11 @@ namespace DMS3{
     }
 
     std::uint64_t Event::getId() const {
-        return _id;
+        return _id._64;
     }
 
     void Event::setId(std::uint64_t id) {
-        _id = id;
+        _id._64 = id;
     }
 
     void* Event::getPayload() const {

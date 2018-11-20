@@ -3,6 +3,13 @@
 #include <cstdint>
 #include <climits>
 namespace DMS3{
+	union _64bit{
+		std::uint64_t _64;
+		std::uint32_t _32[2];
+		std::uint16_t _16[4];
+		std::uint8_t _8[8];
+		_64bit(std::uint64_t new_value);
+	};
 	struct Event{
 public:
     Event();
@@ -13,7 +20,7 @@ public:
     void* getPayload() const;
     void setPayload(void* payload);
 private:
-		std::uint64_t _id;
+		_64bit _id;
 		void* _payload;
 	};
 };
