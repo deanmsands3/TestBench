@@ -22,7 +22,7 @@ AudioEngine::~AudioEngine()
     //dtor
 }
 
-AudioEngine::AudioEngine(const AudioEngine& other)
+AudioEngine::AudioEngine(const AudioEngine& other):EventEngine(other.getSizeOfQueue(), other.getEngineID())
 {
     //copy ctor
 }
